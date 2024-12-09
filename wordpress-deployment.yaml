@@ -14,7 +14,7 @@ spec:
         app: wordpress
     spec:
       containers:
-      - name: wordpress
+      - name: wordpress-app
         image: quay.io/jonasbjork/lernialab:latest
         imagePullPolicy: Always
         ports:
@@ -24,7 +24,7 @@ spec:
           mountPath: /data
 
         - name: wp-config-file
-          mountPath: /data
+          mountPath: /opt/app-root/src/wp-config.php
           subPath: wp-config.php
       volumes:
       - name: wp-config-file
