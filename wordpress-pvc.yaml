@@ -10,5 +10,5 @@ spec:
   resources:
     requests:
       storage: 5Gi
-  volumeName: datadisk5
+  volumeName: norrtestpv
   storageClassName: lvms-vg1
