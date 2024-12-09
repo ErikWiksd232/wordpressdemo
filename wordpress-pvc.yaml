@@ -3,11 +3,12 @@ apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   name: wordpress-pvc
+  namespace: norrtest
 spec:
   accessModes:
-  - ReadWriteOnce
+    - ReadWriteOnce
   resources:
     requests:
       storage: 5Gi
+  volumeName: datadisk5
   storageClassName: lvms-vg1
-  volumeMode: Filesystem
