@@ -22,6 +22,7 @@ spec:
         volumeMounts:
         - name: wordpress-data
           mountPath: /data
+
         - name: wp-config-file
           mountPath: /data
           subPath: wp-config.php
