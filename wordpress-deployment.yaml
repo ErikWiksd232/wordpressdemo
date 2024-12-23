@@ -4,7 +4,7 @@ kind: Deployment
 metadata:
   name: wordpress
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: wordpress
@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: wordpress-app
-        image: quay.io/jonasbjork/lernialab:latest
+        image: quay.io/erik_wikstrom/wordpress
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
